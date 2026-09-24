@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .glass-nav {
+    background: rgba(250, 248, 245, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  }
+
+  .gradient-sky-sunset {
+    background: linear-gradient(135deg, #E0F2FE 0%, #FAF8F5 50%, #FFEDD5 100%);
+  }
+
+  .gradient-hero {
+    background: radial-gradient(circle at 10% 20%, rgba(224, 242, 254, 0.7) 0%, rgba(255, 237, 213, 0.5) 45%, rgba(220, 252, 231, 0.4) 90%);
+  }
+
+  .gradient-text-sky {
+    background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 50%, #0369A1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-warm {
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

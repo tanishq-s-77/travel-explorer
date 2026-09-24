@@ -1,0 +1,15 @@
+{
+  "name": "explorer-travel",
+  "version": "1.0.0",
+  "description": "Travel Explorer full-stack application with live weather, Unsplash photography, and Supabase wishlist",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "npx concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": ["travel", "react", "express", "supabase", "openweathermap", "unsplash"],
+  "author": "",
+  "license": "ISC"
+}
