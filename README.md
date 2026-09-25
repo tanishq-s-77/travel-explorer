@@ -43,57 +43,7 @@ explorer-travel/
 └── README.md
 ```
 
----
-
-## 🔑 Environment Variables Setup
-
-The application reads configuration from two `.env` files:
-
-### 1. Backend (`server/.env`)
-Create or edit `server/.env`:
-```env
-PORT=5000
-CLIENT_URL=http://localhost:5173
-
-# Supabase Credentials (from Supabase Dashboard > Project Settings > API)
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-SUPABASE_ANON_KEY=your_supabase_anon_key
-
-# OpenWeatherMap API Key (from https://openweathermap.org/api)
-OPENWEATHER_API_KEY=your_openweathermap_api_key
-
-# Unsplash API Access Key (from https://unsplash.com/developers)
-UNSPLASH_ACCESS_KEY=your_unsplash_access_key
-```
-
-### 2. Frontend (`client/.env`)
-Create or edit `client/.env`:
-```env
-# Express API Endpoint
-VITE_API_URL=http://localhost:5000/api
-
-# Supabase Credentials (for browser authentication)
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-> **Note**: Even before you paste your API keys, the application includes graceful fallback weather and curated photography so the site is immediately testable and never displays blank screens!
-
----
-
-## 🗄️ Supabase Database Setup
-
-1. Open your [Supabase Dashboard](https://supabase.com/dashboard) and navigate to the **SQL Editor**.
-2. Open `supabase/schema.sql` from this repository and copy its content.
-3. Paste and run the query in your Supabase SQL editor:
-   - Creates the `wishlist` table referencing `auth.users(id)`.
-   - Enables Row Level Security (RLS) with policies for user-specific viewing, inserting, and deleting.
-   - Creates unique constraint to prevent duplicate saves.
-
----
-
-## 🏃 Running the Application
+Running the Application
 
 ### 1. Install dependencies (if not already installed)
 ```bash
